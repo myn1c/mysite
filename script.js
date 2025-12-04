@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById('hamburger');
     const navLinksContainer = document.getElementById('nav-links');
 
-    if (!navLinksContainer) return;
-
     sections.forEach((sec, i) => {
         if (i !== 0) sec.style.display = "none";
     });
