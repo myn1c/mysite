@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a3a2a;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    max-width: 900px;
+    margin: auto;
+}
+
+.navbar {
+    background: #083225;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.hero-section {
+    padding: 130px 0 100px;
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+.hero-section h1 {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.content-section {
+    padding: 90px 0;
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+.content-section.dark {
+    background: #072f22;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 100%;
+    padding: 25px;
+    border-radius: 16px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section {
+    transition: opacity 0.5s ease;
+}
