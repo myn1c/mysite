@@ -1,6 +1,7 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 const hamburger = document.getElementById('hamburger');
+const navLinksContainer = document.getElementById('nav-links');
 
 sections.forEach((sec, i) => {
     if (i !== 0) sec.style.display = "none";
@@ -18,9 +19,13 @@ navLinks.forEach(link => {
 
         targetSection.style.opacity = 0;
         setTimeout(() => targetSection.style.opacity = 1, 50);
+
+        if (navLinksContainer.classList.contains('active')) {
+            navLinksContainer.classList.remove('active');
+        }
     });
 });
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
 });
