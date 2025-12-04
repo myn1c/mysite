@@ -44,9 +44,29 @@
       color: white;
     }
 
+    .hamburger {
+      display: block;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      z-index: 110;
+    }
+
     .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #083225;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+      z-index: 100;
+    }
+
+    .nav-links.active {
       display: flex;
-      gap: 20px;
     }
 
     .nav-links a {
@@ -69,13 +89,6 @@
 
     .nav-links a:hover::after,
     .nav-links a.active::after { width: 100%; }
-
-    .hamburger {
-      display: none;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-    }
 
     section {
       padding: 100px 20px;
@@ -107,32 +120,6 @@
     .social-link:hover {
       transform: translateY(-4px);
       opacity: 0.85;
-    }
-
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: #083225;
-        flex-direction: column;
-        display: none;
-        gap: 10px;
-        padding: 10px 0;
-      }
-      .nav-links.active { display: flex; }
-      .nav-links a { font-size: 14px; }
-      .hero-section h1 { font-size: 40px; }
-      .hero-section p { font-size: 16px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-section h1 { font-size: 32px; }
-      .hero-section p { font-size: 14px; }
-      .nav-links a { font-size: 12px; }
-      .social-link { font-size: 12px; padding: 6px 12px; }
     }
   </style>
 </head>
@@ -203,9 +190,7 @@
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
 
-      if (navLinksContainer.classList.contains('active')) {
-        navLinksContainer.classList.remove('active');
-      }
+      navLinksContainer.classList.remove('active');
     });
   });
 </script>
