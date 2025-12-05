@@ -1,8 +1,2 @@
-title: mysite
-author: Yaroslav
-logo: im.ico
-
-html:
-  use_edit_page_button: false
-  use_issues_button: false
-  use_repository_button: false
+github:
+  is_project_page: false
