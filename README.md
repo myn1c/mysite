@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="favicon.ico" width="100" height="100">
+    <img src="im.png" width="100" height="100">
     <br>
     <b>Myn1c</b>
     <br>
