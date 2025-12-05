@@ -1,3 +1,7 @@
+title: mysite
+author: Yaroslav
+logo: im.ico
+
 html:
   use_edit_page_button: false
   use_issues_button: false
