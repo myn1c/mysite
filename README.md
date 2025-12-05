@@ -27,7 +27,7 @@
 Занимаюсь бэкендом.
 
 ## Мои проекты 
-`Meto`[*](warning.md)
+`Meto`[*](warning.md) [репозиторий](https://github.com/myn1c/meto)
 
 ---
 
