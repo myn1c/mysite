@@ -33,6 +33,6 @@
 ---
 
 ## Мои соцсети 
-
+[Telegram](https://t.me/lostfalse)
 ---
 
